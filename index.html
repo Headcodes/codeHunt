@@ -9,22 +9,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
-<script>
-    $(document).ready(function() {
-        $("#selectOrInput").change(function() {
-            if ($(this).val() === "other") {
-                $("#otherInput").show();
-            } else {
-                $("#otherInput").hide();
-            }
-        });
-    });
-   
-
-</script>
 
   </head>
 
@@ -120,7 +106,7 @@
     
     <div class="container-fluid fw-light  content">
         <div class="row">
-          <h2 class="text-center mainHead">Code Hunter</h2>
+          <h2 class="text-center mainHead">Code Hunt</h2>
         
           <p class="text-center subContent">
             Unlock coding basics FREE! <br/>Perfect for beginners. <br/>Dive into key concepts and syntax. Join now and ignite your tech journey!</p>
@@ -234,13 +220,29 @@
       </footer>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
    <script>
     <!-- Ajax Success Message and Redirection -->
+    $(document).ready(function() {
+        $("#selectOrInput").change(function() {
+            if ($(this).val() === "other") {
+                $("#otherInput").show();
+            } else {
+                $("#otherInput").hide();
+            }
+        });
+    });
    
         $("#submit-form").submit((e) => {
+          console.log("submited");
             e.preventDefault();
             $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbxL9YcaMeFkTWnLzxWuXFsp6AeIxDdPPrM1O81o2zAOPB-ibsSl-VM78mne9WhVeDhZ/exec",
+                url: "https://script.google.com/macros/s/AKfycbwirGQ4IGZvZnVhJK1h68528ZYwO2rE6y54KjllktQrFn9Me_hlKOnXfkGBTbxDLGPnRQ/exec",
                 data: $("#submit-form").serialize(),
                 method: "post",
                 success: function (response) {
@@ -250,7 +252,7 @@
                     $(".success-message").show();
                     // Redirect to another page after a delay (e.g., 3 seconds)
                     setTimeout(function () {
-                        window.location.href = "https://headcodes.in/"; // Change the URL to your desired page
+                        window.location.href = "https://chat.whatsapp.com/GrchkkZKTabK84f2Q7A6AC"; // Change the URL to your desired page
                     }, 3000); // 3000 milliseconds (3 seconds)
                 },
                 error: function (err) {
@@ -260,8 +262,6 @@
         });
     </script>
    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
   </body>
 </html>
