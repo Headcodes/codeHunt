@@ -9,6 +9,46 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#selectOrInput").change(function() {
+            if ($(this).val() === "other") {
+                $("#otherInput").show();
+            } else {
+                $("#otherInput").hide();
+            }
+        });
+    });
+    $(document).ready(function() {
+    $("#myForm").submit(function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Perform your AJAX request
+        $.ajax({
+            type: "POST", // or "GET" depending on your needs
+            url: "your_ajax_endpoint_url",
+            data: $(this).serialize(), // Serialize the form data
+            success: function(response) {
+                // Process the AJAX response
+
+                // You can decide whether to redirect or not based on the response
+                if (response.shouldRedirect) {
+                    window.location.href = response.redirectUrl;
+                } else {
+                    // Do something else
+                }
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+            }
+        });
+    });
+});
+
+</script>
+
   </head>
 
   <body>
@@ -50,7 +90,7 @@
      
     <div class="wrapper forms text-light">
       <div class="inner pl-5 ml-5 mx-auto">
-        <form action="">
+        <form action="" id="myForm">
           <h3>Registration Form</h3>
           <div class="form-group">
             <div class="form-wrapper">
@@ -82,14 +122,19 @@
               </select>
           </div>
           <div class="form-wrapper">
-            <label for="">From where you here about this</label>
-            <select class="form-select form-select-lg mb-3 form-control w-100" aria-label="Default select example">
-                <option selected>Select from these ...</option>
-                <option value="1">Instagram</option>
-                <option value="2">Face-book</option>
-                <option value="3">Whats App</option>
-                <option value="3">Other</option>
-              </select>
+         
+              <label for="selectOrInput">Select an option or input your own:</label>
+    <select class="form-select form-select-lg mb-3 form-control w-100" id="selectOrInput" aria-label="Default select example">
+
+       <option selected>Select from these ...</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Face-book">Face-book</option>
+                <option value="Whats App">Whats App</option>
+                <option value="other">Other</option>
+           </select>
+
+<input class="form-select form-select-lg mb-3 form-control w-100" type="text" id="otherInput" name="otherInput" style="display: none;">
+
           </div>
           <button>Register Now</button>
         </form>
