@@ -10,6 +10,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
     $(document).ready(function() {
         $("#selectOrInput").change(function() {
@@ -65,7 +67,7 @@
      
     <div class="wrapper forms text-light">
       <div class="inner pl-5 ml-5 mx-auto">
-        <form action="" id="submit-form">
+        <form action="" method="POST" id="submit-form">
           <h3>Registration Form</h3>
           <div class="form-group">
             <div class="form-wrapper">
@@ -111,8 +113,9 @@
 <input class="form-select form-select-lg mb-3 form-control w-100" type="text" id="otherInput" name="otherInput" style="display: none;">
 
           </div>
-          <button onclick="saveToExcel()">Register Now</button>
+          <button type="submit">Register Now</button>
         </form>
+        <div class="success-message" style="display: none;">Form submitted successfully!</div>
       </div>
     
     <div class="container-fluid fw-light  content">
