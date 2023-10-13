@@ -169,7 +169,7 @@ form {
   margin-top: 30px;
   padding-top: 20px;
   font-size: 20px;
-}
+  }
 h1 {
   color: white;
   font-size: 50px;
@@ -370,7 +370,9 @@ footer p {
   .navbar-toggler-icon {
     background-color: #302828; /* Color of the lines in the hamburger icon */
   }
-
+  .subContent{
+    margin-bottom: 20px;
+  }
   .forms {
     display: flex;
     flex-direction: column-reverse;
