@@ -20,32 +20,7 @@
             }
         });
     });
-    $(document).ready(function() {
-    $("#myForm").submit(function(event) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-
-        // Perform your AJAX request
-        $.ajax({
-            type: "POST", // or "GET" depending on your needs
-            url: "your_ajax_endpoint_url",
-            data: $(this).serialize(), // Serialize the form data
-            success: function(response) {
-                // Process the AJAX response
-
-                // You can decide whether to redirect or not based on the response
-                if (response.shouldRedirect) {
-                    window.location.href = response.redirectUrl;
-                } else {
-                    // Do something else
-                }
-            },
-            error: function(xhr, status, error) {
-                // Handle errors
-            }
-        });
-    });
-});
+   
 
 </script>
 
@@ -90,41 +65,41 @@
      
     <div class="wrapper forms text-light">
       <div class="inner pl-5 ml-5 mx-auto">
-        <form action="" id="myForm">
+        <form action="" id="submit-form">
           <h3>Registration Form</h3>
           <div class="form-group">
             <div class="form-wrapper">
-              <label for="">First Name</label>
-              <input type="text" class="form-control" />
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName"/>
             </div>
             <div class="form-wrapper">
-              <label for="">Last Name</label>
-              <input type="text" class="form-control" />
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" class="form-control" id="lastName" />
             </div>
           </div>
          
           <div class="form-wrapper">
-            <label for="">Phone Number</label>
-            <input type="text" class="form-control" />
+            <label for="phNo">Phone Number</label>
+            <input type="text" name="phoneNumber" class="form-control" id="phNo" />
           </div>
           <div class="form-wrapper">
-            <label for="">Email</label>
-            <input type="email" class="form-control" />
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email"/>
           </div>
           <div class="form-wrapper">
-            <label for="">Qualification</label>
-            <select class="form-select form-select-lg mb-3 form-control w-100" aria-label="Default select example">
+            <label for="Qualification">Qualification</label>
+            <select class="form-select form-select-lg mb-3 form-control w-100" name="qualification" aria-label="Default select example" id="Qualification">
                 <option selected>Open this select menu</option>
-                <option value="1">Plus Two</option>
-                <option value="2">BE/B.TECH</option>
-                <option value="3">DEGREE</option>
-                <option value="3">DIPLOMA</option>
+                <option value="Plus Two">Plus Two</option>
+                <option value="BE/B.TECH">BE/B.TECH</option>
+                <option value="DEGREE">DEGREE</option>
+                <option value="DIPLOMA">DIPLOMA</option>
               </select>
           </div>
           <div class="form-wrapper">
          
-              <label for="selectOrInput">Select an option or input your own:</label>
-    <select class="form-select form-select-lg mb-3 form-control w-100" id="selectOrInput" aria-label="Default select example">
+              <label for="selectOrInput">How did you hear about this program</label>
+    <select class="form-select form-select-lg mb-3 form-control w-100" name="hearAboutThis" id="selectOrInput" aria-label="Default select example">
 
        <option selected>Select from these ...</option>
                 <option value="Instagram">Instagram</option>
@@ -136,7 +111,7 @@
 <input class="form-select form-select-lg mb-3 form-control w-100" type="text" id="otherInput" name="otherInput" style="display: none;">
 
           </div>
-          <button>Register Now</button>
+          <button onclick="saveToExcel()">Register Now</button>
         </form>
       </div>
     
@@ -256,7 +231,32 @@
       </footer>
     </div>
   </div>
-
+   <script>
+    <!-- Ajax Success Message and Redirection -->
+   
+        $("#submit-form").submit((e) => {
+            e.preventDefault();
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbxL9YcaMeFkTWnLzxWuXFsp6AeIxDdPPrM1O81o2zAOPB-ibsSl-VM78mne9WhVeDhZ/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {
+                    // Hide the form
+                    $("#submit-form").hide();
+                    // Display the success message
+                    $(".success-message").show();
+                    // Redirect to another page after a delay (e.g., 3 seconds)
+                    setTimeout(function () {
+                        window.location.href = "https://headcodes.in/"; // Change the URL to your desired page
+                    }, 3000); // 3000 milliseconds (3 seconds)
+                },
+                error: function (err) {
+                    alert("Something went wrong.");
+                }
+            });
+        });
+    </script>
+   </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
