@@ -357,6 +357,7 @@ footer p {
   }
   .navbar button {
     margin: 0;
+    width: 80px;
     background-color: transparent;
   }
 
