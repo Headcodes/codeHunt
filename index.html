@@ -9,9 +9,6 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    
-
-
   </head>
 
   <body>
@@ -27,7 +24,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ml-auto  ">
@@ -37,7 +34,6 @@
           <li class="nav-item px-3 ">
             <a class="nav-link" href="#AboutProgram">About</a>
           </li>
-      
           <li class="nav-item px-3">
             <a class="nav-link" href="#Contactus">Contact</a>
           </li>
@@ -45,39 +41,37 @@
       </div>
     </nav>
 </div>
-    <!-- FORM -->
-    <div class="container mx-auto my-auto">
+<!-- FORM -->
+<div class="container mx-auto my-auto">
           
-        <div class="d-flex flex-wrap mx-auto my-auto">
-
-     
+  <div class="d-flex flex-wrap mx-auto my-auto">
     <div class="wrapper forms text-light">
       <div class="inner pl-5 ml-5 mx-auto">
         <form action="" method="POST" id="submit-form">
           <h3>Registration Form</h3>
-          <div class="form-group">
+           <div class="form-group">
             <div class="form-wrapper">
               <label for="firstName">First Name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName"/>
+              <input type="text" class="form-control" id="firstName" name="firstName" required/>
             </div>
             <div class="form-wrapper">
               <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" class="form-control" id="lastName" />
+              <input type="text" name="lastName" class="form-control" id="lastName" required />
             </div>
           </div>
          
           <div class="form-wrapper">
             <label for="phNo">Phone Number</label>
-            <input type="text" name="phoneNumber" class="form-control" id="phNo" />
+            <input type="text" name="phoneNumber" class="form-control" id="phNo" placeholder="9061454178" required />
           </div>
           <div class="form-wrapper">
             <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" id="email"/>
+            <input type="email" name="email" class="form-control" id="email"placeholder="example@email.com" required/>
           </div>
           <div class="form-wrapper">
             <label for="Qualification">Qualification</label>
-            <select class="form-select form-select-lg mb-3 form-control w-100" name="qualification" aria-label="Default select example" id="Qualification">
-                <option selected>Open this select menu</option>
+            <select class="form-select form-select-lg mb-3 form-control w-100" name="qualification" aria-label="Default select example" id="Qualification" required>
+                <option value="">Open this select menu</option>
                 <option value="Plus Two">Plus Two</option>
                 <option value="BE/B.TECH">BE/B.TECH</option>
                 <option value="DEGREE">DEGREE</option>
@@ -86,22 +80,23 @@
           </div>
           <div class="form-wrapper">
          
-              <label for="selectOrInput">How did you hear about this program</label>
-    <select class="form-select form-select-lg mb-3 form-control w-100" name="hearAboutThis" id="selectOrInput" aria-label="Default select example">
+      <label for="selectOrInput">How did you hear about this program</label>
+        <select class="form-select form-select-lg mb-3 form-control w-100" name="hearAboutThis" id="selectOrInput" aria-label="Default select example" required>
 
-       <option selected>Select from these ...</option>
+                <option value="">Select from these ...</option>
                 <option value="Instagram">Instagram</option>
                 <option value="Face-book">Face-book</option>
                 <option value="Whats App">Whats App</option>
                 <option value="other">Other</option>
-           </select>
+        </select>
 
-<input class="form-select form-select-lg mb-3 form-control w-100" type="text" id="otherInput" name="otherInput" style="display: none;">
+       <input class="form-select form-select-lg mb-3 form-control w-100" type="text" id="otherInput" name="otherInput" style="display: none;">
 
-          </div>
-          <button type="submit">Register Now</button>
-        </form>
+         </div>
+        <button type="submit">Register Now</button>
+      </form>
         <div class="success-message" style="display: none;">Form submitted successfully!</div>
+        <div id="whatsapp-links" style="display: none;"></div>
       </div>
     
     <div class="container-fluid fw-light  content">
@@ -135,29 +130,28 @@
       </section>
     <!-- CODERS -->
     <div class="container-fluid vh-100 coders"  id="Contactus">
-        <p class="subhead text-white text-center pb-3 pt-3 mt-3 mb-3">Meet our Developers</p>
+      <p class="subhead text-white text-center pb-3 pt-3 mt-3 mb-3">Meet our Developers</p>
         <div class="container mx-auto my-auto">
-          
-            <div class="d-flex flex-wrap mx-auto my-auto">
-    <div class="row mx-auto my-3 py-5">
-      <div class="col-lg-4  mb-3 text-center ">
+          <div class="d-flex flex-wrap mx-auto my-auto">
+            <div class="row mx-auto my-3 py-5">
+              <div class="col-lg-4  mb-3 text-center ">
 
-        <img class="bd-placeholder-img rounded-circle "
-        width="140"
-        height="140" src="./Images/shaun.jpg" alt="">
+               <img class="bd-placeholder-img rounded-circle "
+                 width="140"
+                  height="140" src="./Images/shaun.jpg" alt="">
         
        
-        <h4 class="fst-normal pt-3 pb-4">Shaun P Binoy</h4>
+                <h4 class="fst-normal pt-3 pb-4">Shaun P Binoy</h4>
        
-      </div>
+              </div>
       <!-- /.col-lg-4 -->
-      <div class="col-lg-4  mb-3 text-center ">
-        <img class="bd-placeholder-img rounded-circle "
-        width="140"
-        height="140" src="./Images/manya.jpeg" alt="">
-        <h4 class="fst-normal pt-3 pb-4">Manya Manikandan</h4>
+             <div class="col-lg-4  mb-3 text-center ">
+                <img class="bd-placeholder-img rounded-circle "
+                  width="140"
+                  height="140" src="./Images/manya.jpeg" alt="">
+                <h4 class="fst-normal pt-3 pb-4">Manya Manikandan</h4>
        
-      </div>
+              </div>
       <!-- /.col-lg-4 -->
       <div class="col-lg-4  mb-3 text-center">
         <img class="bd-placeholder-img rounded-circle"
@@ -196,11 +190,7 @@
       
     
 <!--Footer-->
-
-
-
-  
-    <div class="container-fluid">
+<div class="container-fluid">
       <footer class="d-flex flex-wrap  py-3 my-4 border-top">
   
           <a href="/" class="col-md-4 d-flex   mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -210,7 +200,7 @@
         <p class="col-md-4 mb-0 text-body-secondary ">© 2023 HEAD CODES</p>
   
         
-        <ul class="nav col-md-4  ">
+        <ul class="nav col-md-4 ">
           <li class="ms-0 p-3"><a class="text-body-secondary" href="https://www.linkedin.com/company/headcodes/"><img src="./Images/linkedin.png" alt="" width="32" height="32"></a></li>
           <li class="ms-0 p-3"><a class="text-body-secondary" href="https://www.instagram.com/head_codes/"><img src="./Images/instagram.png" alt="" width="32" height="32"></li>
             <li class="ms-0 p-3"><a class="text-body-secondary" href="https://www.youtube.com/@HeadCodes"><img src="./Images/youtube.png" alt="" width="32" height="32"></a></li>
@@ -220,13 +210,12 @@
       </footer>
     </div>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-   <script>
+  <script>
     <!-- Ajax Success Message and Redirection -->
     $(document).ready(function() {
         $("#selectOrInput").change(function() {
@@ -246,22 +235,38 @@
                 data: $("#submit-form").serialize(),
                 method: "post",
                 success: function (response) {
-                    // Hide the form
-                    $("#submit-form").hide();
-                    // Display the success message
-                    $(".success-message").show();
-                    // Redirect to another page after a delay (e.g., 3 seconds)
-                    setTimeout(function () {
-                        window.location.href = "https://chat.whatsapp.com/GrchkkZKTabK84f2Q7A6AC"; // Change the URL to your desired page
-                    }, 3000); // 3000 milliseconds (3 seconds)
+                  $("#submit-form").submit(function(event) {
+                 event.preventDefault();
+                    
+                  // Hide the submit form
+                 $("#submit-form").fadeOut();
+            
+                   // Display the success message
+                 $(".success-message").show();
+               
+              // Display the WhatsApp group links
+          var groupLinks = '<div class="whatsapp-links">\
+                            <p>Choose a WhatsApp group to join:</p>\
+                            <a href="https://chat.whatsapp.com/GrchkkZKTabK84f2Q7A6AC" target="_blank"><div class="links"> <span><img src="./Images/whatsapp.png" alt="" width="32px" height="32px"> </span>WhatsApp Group 1</div></a><br/>\
+                           <a href="https://chat.whatsapp.com/HJlPnHK8CpQ1tXzJI6g1eu" target="_blank"> <div class="links"> <span><img src="./Images/whatsapp.png" alt="" width="32px" height="32px"> </span>WhatsApp Group 2</div></a><br/>\
+                            <a href="https://chat.whatsapp.com/FMViUkGoSaUDZ2MP5jCQPc" target="_blank"> <div class="links"> <span><img src="./Images/whatsapp.png" alt="" width="32px" height="32px"> </span>WhatsApp Group 3</div></a>\
+                        </div>';
+
+              // Prepend the WhatsApp group links to the top of the page
+            $("#whatsapp-links").prepend(groupLinks);
+
+                // Fade in the WhatsApp group links
+           $("#whatsapp-links").fadeIn();
+          });
+                 
                 },
                 error: function (err) {
                     alert("Something went wrong.");
                 }
             });
         });
-    </script>
-   </script>
+  </script>
+  </script>
  
   </body>
 </html>

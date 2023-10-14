@@ -164,6 +164,51 @@ form {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 80%;
+  font-weight: 500;
+  
+}
+.whatsapp-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #00cc00;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  width: 80%;
+}
+.whatsapp-links p{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color:black;
+}
+
+.whatsapp-links .links{
+  
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #00cc00;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  
+}
+.whatsapp-links .links:hover{
+  color: white;
+  background-color:  rgb(90, 5, 5);
+  transition: 0.3s ease-in-out;
+}
+.whatsapp-links a{
+  text-decoration: none;
+  
+  color:black;
+}
+.whatsapp-links a:hover{
+  color: white;
 }
 .content {
   margin-top: -20px;
@@ -355,7 +400,7 @@ footer p {
   .content h2 {
     text-align: center;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 54px;
   }
   form {
     width: 100%;
@@ -363,7 +408,12 @@ footer p {
     padding-right: 15px;
     padding-left: 15px;
   }
-
+  .whatsapp-links{
+    margin-right: 40px;
+  }
+  .success-message{
+    margin-right: 40px;
+  }
   .navbar-brand {
     width: 50%;
   }
